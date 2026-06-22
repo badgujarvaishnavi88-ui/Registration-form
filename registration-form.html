@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(palevioletred,white);
+    font-family:Arial, sans-serif;
+}
+
+.form-box{
+    animation: slideUp 1s ease;
+    width:100%; max-width:700px; 
+    margin: auto;
+    background:palevioletred; padding:35px; 
+    border-radius:20px; box-shadow:0 0 20px rgb(255,250,250); 
+    color:black
+}
+
+@keyframes slideUp{
+    from{
+        opacity:0;
+        transform:translateY(50px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+.title{
+    text-align:center;
+    margin-bottom:25px;
+    color:rgb(149, 13, 58);
+    font-weight:bold;
+    letter-spacing:2px;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 5px white;
+    }
+    to{
+        text-shadow:
+        0 0 10px white,
+        0 0 20px pink,
+        0 0 30px hotpink;
+    }
+}
+
+.form-label{
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.form-control,
+.form-select{
+    background:white;
+    border:1px solid whitesmoke;
+    color:black;
+    border-radius:12px;
+    padding:12px;
+}
+
+.form-control:focus, .form-select:focus{ 
+    background:pink; 
+    color:black; 
+    border-color:antiquewhite; 
+    box-shadow:0 0 10px lightgoldenrodyellow; 
+}
+.icon{
+    color:black;
+    margin-right:6px;
+}
+
+.option-box{
+    background:linear-gradient(135deg,#fff0f5,#ffe4e1);
+    border:2px solid white;
+    padding:12px;
+    border-radius:15px;
+    color:#8b005d;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.option-box:hover{
+    transform:scale(1.03);
+    box-shadow:0 0 15px white;
+}
+.education-box{
+    background:linear-gradient(135deg,#ffe4e1,#fff0f5);
+    border:2px solid white;
+    padding:20px;
+    border-radius:20px;
+    margin-bottom:20px;
+    box-shadow:0 0 15px rgba(255,255,255,0.5);
+}
+.btn-register{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right, hotpink,skyblue);
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    transition:0.4s;
+}
+
+.btn-register:hover{
+    background:rgb(20, 99, 184);
+    transform:translateY(-5px);
+    box-shadow:0 0 20px hotpink;
+}
+
+</style>
+</head>
+<body>
+    <div class="container">
+<div class="row justify-content-center">
+<div class="col-lg-8">
+
+<form class="form-box">
+
+<h2 class="title">User Registration</h2>
+
+<div class="row">
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-person-fill icon"></i>Full Name
+</label>
+<input type="text" class="form-control" placeholder="Enter Name">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-envelope-fill icon"></i>Email
+</label>
+<input type="email" class="form-control" placeholder="Enter Email">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-lock-fill icon"></i>Password
+</label>
+<input type="password" class="form-control" placeholder="Enter Password">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-telephone-fill icon"></i>Mobile
+</label>
+<input type="tel" class="form-control" placeholder="Enter Mobile Number">
+</div>
+
+<div class="col-12 mb-3">
+<label class="form-label">
+<i class="bi bi-house-fill icon"></i>Address
+</label>
+<textarea class="form-control" rows="3"></textarea>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-geo-alt-fill icon"></i>City
+</label>
+<select class="form-select">
+<option>Select City</option>
+<option>Jalgaon</option>
+<option>Mumbai</option>
+<option>Pune</option>
+<option>Nashik</option>
+</select>
+</div>
+<div class="education-box">
+   <!-- Education Details -->
+
+<div class="col-12 mb-3">
+    <h4 class="title" style="font-size:22px;">Education Details</h4>
+</div>
+
+<!-- SSC Marks -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-award-fill icon"></i>SSC Percentage
+    </label>
+    <input type="number" class="form-control" placeholder="Enter SSC Percentage">
+</div>
+
+<!-- HSC Marks -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-award-fill icon"></i>HSC Percentage
+    </label>
+    <input type="number" class="form-control" placeholder="Enter HSC Percentage">
+</div>
+
+<!-- Degree Name -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-mortarboard-fill icon"></i>Degree
+    </label>
+    <select class="form-select">
+    <option>Select Degree</option>
+    <option>B.Sc(CS)</option>
+    <option>BCA</option>
+    <option>BTech</option>
+    <option>BVoc</option>
+    <option>BE</option>
+    </select>
+</div>
+
+<!-- College Name -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-building-fill icon"></i>College Name
+    </label>
+    <input type="text" class="form-control" placeholder="Enter College Name">
+</div>
+
+<!-- CGPA -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-bar-chart-fill icon"></i>CGPA
+    </label>
+    <input type="number" step="0.01" class="form-control" placeholder="Enter CGPA">
+</div>
+
+<!-- Passing Year -->
+
+<div class="col-md-6 mb-3">
+    <label class="form-label">
+        <i class="bi bi-calendar-event-fill icon"></i>Passing Year
+    </label>
+    <input type="number" class="form-control" placeholder="Enter Passing Year">
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-upload icon"></i>Upload File
+</label>
+<input type="file" class="form-control">
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-heart-fill icon"></i>Hobbies
+</label>
+
+<div class="option-box">
+<input type="checkbox"> Dancing
+<input type="checkbox" class="ms-3"> Music
+<input type="checkbox" class="ms-3"> Drawing
+</div>
+</div>
+
+<div class="col-md-6 mb-3">
+<label class="form-label">
+<i class="bi bi-gender-ambiguous icon"></i>Gender
+</label>
+
+<div class="option-box">
+<input type="radio" name="gender"> Male
+<input type="radio" name="gender" class="ms-3"> Female
+</div>
+</div>
+
+<div class="col-12 mt-3">
+<button class="btn-register">
+<i class="bi bi-person-plus-fill"></i> Submit
+</button>
+</div>
+
+</div>
+
+</form>
+
+</div>
+</div>
+</div>
+
+</body>
+</html>
